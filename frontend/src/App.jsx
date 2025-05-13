@@ -4,7 +4,7 @@ import Register from "./components/auth/register";
 import UserChoice from "./pages/UserChoice";
 import Pembeli from "./pages/Pembeli";
 import Penjual from "./pages/Penjual";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/protectedroute";
 import LandingPage from "./pages/Landing";
 
 function App() {
