@@ -40,7 +40,7 @@ const ItemCard = ({ item, stock }) => {
 
         {stock > 0 ? (
           <a
-            href={`https://wa.me/6281388895398?text=Halo%2C%20saya%20ingin%20memesan%20sepeda%20${encodeURIComponent(
+            href={`https://wa.me/6281354497088?text=Halo%2C%20saya%20ingin%20memesan%20sepeda%20${encodeURIComponent(
               item.nama
             )}.`}
             target="_blank"
