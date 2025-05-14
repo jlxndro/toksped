@@ -24,7 +24,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<UserChoice />} />
+          <Route path="/user-choice" element={<UserChoice />} />
         </Routes>
       </div>
     </>
