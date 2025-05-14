@@ -46,7 +46,7 @@ const UserChoice = () => {
       >
         <motion.h1
           variants={item}
-          className="text-2xl xs:text-3xl sm:text-4xl font-bold text-slate-800 mb-6 xs:mb-8 sm:mb-10 md:mb-12"
+          className="text-2xl xs:text-3xl sm:text-4xl font-bold text-slate-800 mt-10 mb-6 xs:mb-8 sm:mb-10 md:mb-12"
         >
           Pilih Peran Anda
         </motion.h1>
