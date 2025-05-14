@@ -49,7 +49,7 @@ const Penjual = () => {
 
   const handleLogout = async () => {
     await signOut(auth);
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   const selected = data.find((i) => i.id === selectedProduct);
