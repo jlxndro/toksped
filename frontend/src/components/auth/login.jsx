@@ -6,6 +6,7 @@ import {
 } from "../../firebase/auth";
 import { useAuth } from "../../contexts/authContext";
 import BackButton from "../backbutton";
+import { motion } from "framer-motion";
 
 const Login = () => {
   const { userLoggedIn } = useAuth();
@@ -57,9 +58,23 @@ const Login = () => {
     <div className="min-h-screen bg-white flex items-center justify-center px-6 py-12 relative font-sans">
       <BackButton />
 
-      <div className="flex flex-col md:flex-row w-full max-w-6xl bg-white shadow-xl rounded-3xl overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: 50 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.2, 0.8, 0.2, 1],
+          delay: 0.2,
+        }}
+        className="flex flex-col md:flex-row w-full max-w-6xl bg-white shadow-xl rounded-3xl overflow-hidden"
+      >
         <div className="w-full md:w-1/2 p-10 lg:p-16 flex items-center justify-center">
-          <div className="w-full">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="w-full"
+          >
             <h1 className="text-4xl font-bold text-slate-800 text-center mb-2">
               Selamat Datang
             </h1>
@@ -116,7 +131,7 @@ const Login = () => {
                 {isSigningIn ? "Memproses..." : "Masuk"}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
 
         <div className="hidden md:flex md:w-1/2 items-center justify-center bg-gradient-to-br from-teal-50 to-teal-100 p-10 lg:p-16">
@@ -130,7 +145,7 @@ const Login = () => {
               Juragan Sepeda Manado
             </h2>
             <p className="mt-2 text-lg text-slate-600 font-normal">
-              Sistem Inventaris Toko Modern
+              Inventaris Toko
             </p>
             <div className="mt-6 flex justify-center space-x-2">
               <span className="h-2 w-8 bg-teal-400 rounded-full"></span>
@@ -139,7 +154,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

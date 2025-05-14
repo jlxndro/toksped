@@ -8,9 +8,9 @@ const BackButton = () => {
   return (
     <button
       onClick={() => navigate(-1)}
-      className="absolute top-6 left-6 text-sm text-teal-600 font-medium flex items-center gap-1 transition"
+      className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50 bg-white/80 backdrop-blur-sm shadow-md px-3 py-1.5 rounded-full text-teal-600 text-xs sm:text-sm font-medium flex items-center gap-1 hover:bg-white transition-all"
     >
-      <FaArrowLeft className="mr-2" />
+      <FaArrowLeft className="text-sm sm:text-base" />
       <span>Kembali</span>
     </button>
   );
