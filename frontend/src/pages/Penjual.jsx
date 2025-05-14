@@ -51,7 +51,7 @@ const Penjual = () => {
         amount: parseInt(amount),
         harga: parseInt(harga),
       });
-      setStatus("✅ Stok dan harga berhasil diperbarui.");
+      setStatus("✅ Berhasil diperbarui.");
       setCurrentStock(parseInt(amount));
     } catch (e) {
       console.error("Update error:", e);
